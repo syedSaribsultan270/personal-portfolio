@@ -1,5 +1,3 @@
-"use client"
-
 import { notFound } from "next/navigation"
 import { motion } from "framer-motion"
 import { caseStudies } from "@/lib/data"
@@ -14,7 +12,7 @@ export function generateStaticParams() {
   }))
 }
 
-export default function CaseStudyPage({ params }: { params: { slug: string } }) {
+function CaseStudyPage({ params }: { params: { slug: string } }) {
   const caseStudy = caseStudies.find((study) => study.slug === params.slug)
 
   if (!caseStudy) {
@@ -244,3 +242,5 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
     </>
   )
 }
+
+export default CaseStudyPage
