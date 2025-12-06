@@ -1,0 +1,29 @@
+# Placeholder - Replace with actual project images
+
+This directory contains placeholder references for case study images.
+Replace these with your actual project screenshots and designs.
+
+## Expected Images:
+
+### Parhlai
+- parhlai-thumb.png (thumbnail for card)
+- parhlai-hero.png (hero image)
+- parhlai-1.png, parhlai-2.png, parhlai-3.png (detail images)
+
+### SXTUDIOS
+- sxtudios-thumb.png
+- sxtudios-hero.png
+- sxtudios-1.png, sxtudios-2.png, sxtudios-3.png
+
+### Applify
+- applify-thumb.png
+- applify-hero.png
+- applify-1.png, applify-2.png, applify-3.png
+
+## Recommended Image Sizes:
+
+- Thumbnails: 800x600px
+- Hero: 1920x1080px
+- Detail images: 1600x900px
+
+Format: PNG or JPG, optimized for web
