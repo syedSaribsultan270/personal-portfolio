@@ -173,11 +173,115 @@ export const services = [
 
 export const caseStudies = [
   {
+    slug: "vyro-product-design",
+    title: "Vyro.ai",
+    subtitle: "AI Product Design & User Experience",
+    role: "Associate Product Design",
+    year: "Dec 2025 - Present",
+    category: "Product Design",
+    thumbnail: "/work/vyro-thumb.png",
+    hero: "/work/vyro-hero.png",
+    description: "Designing intuitive AI-powered product experiences that make advanced technology accessible to everyone.",
+    tags: ["Product Design", "AI/ML", "UX", "Design Systems"],
+    overview: "At Vyro.ai, I lead product design initiatives for AI-powered tools, focusing on creating seamless user experiences that bridge complex AI capabilities with intuitive interfaces.",
+    problem: "AI products often suffer from complex interfaces that alienate non-technical users. The challenge was making powerful AI features accessible while maintaining depth for advanced users.",
+    solution: "Developed a progressive disclosure design system that presents AI features contextually, reducing cognitive load while providing power users with advanced controls when needed.",
+    process: [
+      {
+        title: "User Research & Analysis",
+        description: "Conducted extensive research to understand user mental models around AI tools"
+      },
+      {
+        title: "Design System",
+        description: "Created scalable design components that adapt to different AI feature complexities"
+      },
+      {
+        title: "Prototyping & Testing",
+        description: "Iterative prototyping with real users to validate design decisions"
+      },
+      {
+        title: "Implementation & Refinement",
+        description: "Worked closely with engineering to ensure pixel-perfect implementation"
+      }
+    ],
+    outcomes: [
+      {
+        metric: "Ongoing",
+        description: "Active product development"
+      },
+      {
+        metric: "User-Centered",
+        description: "Design approach"
+      },
+      {
+        metric: "AI-Powered",
+        description: "Product experiences"
+      }
+    ],
+    images: [
+      "/work/vyro-1.png",
+      "/work/vyro-2.png",
+      "/work/vyro-3.png"
+    ]
+  },
+  {
+    slug: "imagineart-design",
+    title: "ImagineArt",
+    subtitle: "Creative AI Platform Design",
+    role: "Associate Product Design",
+    year: "Dec 2025 - Present",
+    category: "Product Design",
+    thumbnail: "/work/imagineart-thumb.png",
+    hero: "/work/imagineart-hero.png",
+    description: "Crafting beautiful, intuitive interfaces for AI-powered creative tools that empower artists and designers.",
+    tags: ["Product Design", "Creative Tools", "AI", "Visual Design"],
+    overview: "At ImagineArt, I design product experiences for creative AI tools, balancing powerful AI capabilities with the artistic workflow that creators expect.",
+    problem: "Creative professionals need AI tools that enhance rather than replace their creative process. The challenge was integrating AI seamlessly into existing creative workflows.",
+    solution: "Designed an interface that positions AI as a creative collaborator, not a replacement. Focused on quick iteration cycles and intuitive controls that feel natural to artists.",
+    process: [
+      {
+        title: "Creative Workflow Analysis",
+        description: "Studied how artists and designers work to inform design decisions"
+      },
+      {
+        title: "Interface Design",
+        description: "Created visually stunning yet functional interfaces for creative tools"
+      },
+      {
+        title: "AI Integration",
+        description: "Designed seamless AI feature integration that enhances creativity"
+      },
+      {
+        title: "User Testing",
+        description: "Continuous testing with creative professionals to refine experiences"
+      }
+    ],
+    outcomes: [
+      {
+        metric: "Creative",
+        description: "AI integration"
+      },
+      {
+        metric: "Artist-Focused",
+        description: "Design approach"
+      },
+      {
+        metric: "Intuitive",
+        description: "User experience"
+      }
+    ],
+    images: [
+      "/work/imagineart-1.png",
+      "/work/imagineart-2.png",
+      "/work/imagineart-3.png"
+    ]
+  },
+  {
     slug: "parhlai-marketing",
     title: "Parhlai",
     subtitle: "EdTech Brand & Growth Strategy",
     role: "Head of Marketing",
-    year: "2023 - Present",
+    year: "Oct 2025 - Present",
     category: "Marketing & Growth",
     thumbnail: "/work/parhlai-thumb.png",
     hero: "/work/parhlai-hero.png",
@@ -206,16 +310,16 @@ export const caseStudies = [
     ],
     outcomes: [
       {
-        metric: "300%",
-        description: "Growth in organic reach"
+        metric: "Growing",
+        description: "Brand presence"
       },
       {
-        metric: "45%",
-        description: "Reduction in CAC"
+        metric: "Strategic",
+        description: "Marketing approach"
       },
       {
-        metric: "2.5x",
-        description: "Increase in conversion rate"
+        metric: "Data-Driven",
+        description: "Optimization"
       }
     ],
     images: [
@@ -230,48 +334,48 @@ export const caseStudies = [
   },
   {
     slug: "sxtudios-creative",
-    title: "SXTUDIOS",
-    subtitle: "Creative Studio & Brand Systems",
-    role: "Creative Director & Founder",
-    year: "2022 - Present",
+    title: "sxtudios",
+    subtitle: "Creative Studio & Cinematography",
+    role: "Chief Executive Officer & Founder",
+    year: "Mar 2025 - Present",
     category: "Creative Direction",
     thumbnail: "/work/sxtudios-thumb.png",
     hero: "/work/sxtudios-hero.png",
-    description: "A creative studio focused on narrative-driven design, brand systems, and visual storytelling.",
-    tags: ["Branding", "Illustration", "Motion", "Art Direction"],
-    overview: "SXTUDIOS is my creative practice where I work on brand identity, illustration, motion design, and campaign art direction. The studio philosophy centers on creating emotionally resonant, narrative-driven visual experiences.",
-    problem: "Many brands struggle with generic, forgettable visual identities that fail to tell their story or connect with their audience on an emotional level.",
-    solution: "Developed a studio approach that combines strategic brand thinking with narrative-driven design. Each project starts with deep understanding of brand story, audience, and emotional goals.",
+    description: "Documenting dreams and imagination through creative storytelling, cinematography, and visual narratives.",
+    tags: ["Cinematography", "Branding", "Creative Direction", "Visual Storytelling"],
+    overview: "sxtudios is my creative practice where I combine cinematography, design, and storytelling to help brands and individuals document their vision. The studio philosophy centers on creating emotionally resonant, narrative-driven visual experiences.",
+    problem: "Many brands and creators struggle to tell their story in a way that truly captures the imagination and emotion of their audience.",
+    solution: "Developed a storytelling-first approach that combines cinematography, design, and strategic thinking. Each project is treated as a unique narrative that needs to be crafted with care and authenticity.",
     process: [
       {
-        title: "Brand Discovery",
-        description: "Deep dive into brand purpose, audience, and competitive landscape"
+        title: "Story Discovery",
+        description: "Deep dive into the brand or creator's vision, goals, and emotional core"
       },
       {
-        title: "Narrative Development",
-        description: "Craft the core brand story and emotional positioning"
+        title: "Creative Direction",
+        description: "Develop the visual language and narrative structure for the project"
       },
       {
-        title: "Visual Systems",
-        description: "Design comprehensive identity systems including logo, color, typography, and guidelines"
+        title: "Production",
+        description: "Execute with high-quality cinematography and creative production"
       },
       {
-        title: "Campaign Execution",
-        description: "Apply brand system across campaigns, illustration, and motion"
+        title: "Post-Production",
+        description: "Refine and deliver the final visual narrative"
       }
     ],
     outcomes: [
       {
-        metric: "15+",
-        description: "Brands developed"
+        metric: "Dreams",
+        description: "Documented"
       },
       {
-        metric: "100%",
-        description: "Client satisfaction"
+        metric: "Stories",
+        description: "Told"
       },
       {
-        metric: "50+",
-        description: "Design assets created"
+        metric: "Visions",
+        description: "Captured"
       }
     ],
     images: [
@@ -281,55 +385,107 @@ export const caseStudies = [
     ]
   },
   {
-    slug: "applify-ux",
-    title: "i2or / Applify",
-    subtitle: "UX Engineering & Interface Design",
-    role: "UX Engineer",
-    year: "2021 - 2023",
-    category: "UX Engineering",
-    thumbnail: "/work/applify-thumb.png",
-    hero: "/work/applify-hero.png",
-    description: "Conversion-focused interface design and development using evidence-based UX principles.",
-    tags: ["UI/UX", "React", "Conversion", "User Research"],
-    overview: "As UX Engineer at i2or/Applify, I designed and developed user interfaces that balanced aesthetics with conversion optimization. My work focused on evidence-based decision making and measurable user experience improvements.",
-    problem: "The product needed to increase user engagement and conversion rates while maintaining a clean, modern aesthetic. Previous iterations had low task completion rates and high bounce rates.",
-    solution: "Implemented a systematic UX improvement process combining user research, A/B testing, and iterative design. Developed a component library that ensured consistency while optimizing for conversion.",
+    slug: "easytect-ux",
+    title: "easytect UG",
+    subtitle: "User Experience Design",
+    role: "User Experience Designer",
+    year: "Jan 2024 - Oct 2024",
+    category: "UX Design",
+    thumbnail: "/work/easytect-thumb.png",
+    hero: "/work/easytect-hero.png",
+    description: "Designing intuitive user experiences for digital products in the German market.",
+    tags: ["UX Design", "User Research", "Prototyping", "Interface Design"],
+    overview: "At easytect UG in Germany, I designed user experiences for digital products, focusing on European design standards and user expectations.",
+    problem: "Creating user experiences that meet the high standards of the German market while balancing functionality and aesthetics.",
+    solution: "Implemented a rigorous user research and testing process, combined with clean, functional design principles that aligned with European UX standards.",
     process: [
       {
         title: "User Research",
-        description: "Conducted user interviews, surveys, and analytics analysis to identify pain points"
+        description: "Conducted research to understand German user behavior and expectations"
       },
       {
-        title: "Wireframing & Prototyping",
-        description: "Created low and high-fidelity prototypes with multiple interaction patterns"
+        title: "Wireframing",
+        description: "Created detailed wireframes and user flows"
       },
       {
-        title: "Component Development",
-        description: "Built reusable React components with TailwindCSS and TypeScript"
+        title: "Prototyping",
+        description: "Built interactive prototypes for testing and validation"
       },
       {
         title: "Testing & Iteration",
-        description: "A/B tested variations and iterated based on user behavior data"
+        description: "Iterative testing and refinement based on user feedback"
       }
     ],
     outcomes: [
       {
-        metric: "65%",
-        description: "Increase in conversion rate"
+        metric: "10 Months",
+        description: "Design experience"
       },
       {
-        metric: "40%",
-        description: "Reduction in bounce rate"
+        metric: "European",
+        description: "Market focus"
       },
       {
-        metric: "85%",
-        description: "User satisfaction score"
+        metric: "User-Centered",
+        description: "Approach"
       }
     ],
     images: [
-      "/work/applify-1.png",
-      "/work/applify-2.png",
-      "/work/applify-3.png"
+      "/work/easytect-1.png",
+      "/work/easytect-2.png",
+      "/work/easytect-3.png"
+    ]
+  },
+  {
+    slug: "norenztech-ui-ux",
+    title: "NorenzTech",
+    subtitle: "Lead UI/UX Engineering",
+    role: "Lead UI/UX Engineer",
+    year: "Jan 2025 - Jun 2025",
+    category: "UI/UX Engineering",
+    thumbnail: "/work/norenztech-thumb.png",
+    hero: "/work/norenztech-hero.png",
+    description: "Leading UI/UX design and development initiatives, creating user-centered digital products.",
+    tags: ["UI/UX", "Engineering", "Design Systems", "Product Design"],
+    overview: "As Lead UI/UX Engineer at NorenzTech, I led the design and development of user interfaces, establishing design systems and best practices.",
+    problem: "Needed to establish consistent design standards while rapidly developing new product features.",
+    solution: "Created a comprehensive design system and component library that enabled fast, consistent product development.",
+    process: [
+      {
+        title: "Design System",
+        description: "Established core design principles and component library"
+      },
+      {
+        title: "Interface Design",
+        description: "Designed and developed user interfaces"
+      },
+      {
+        title: "Team Leadership",
+        description: "Led design decisions and mentored team members"
+      },
+      {
+        title: "Quality Assurance",
+        description: "Ensured design quality across all product touchpoints"
+      }
+    ],
+    outcomes: [
+      {
+        metric: "6 Months",
+        description: "Leadership role"
+      },
+      {
+        metric: "Design System",
+        description: "Established"
+      },
+      {
+        metric: "Team",
+        description: "Leadership"
+      }
+    ],
+    images: [
+      "/work/norenztech-1.png",
+      "/work/norenztech-2.png",
+      "/work/norenztech-3.png"
     ]
   }
 ]
