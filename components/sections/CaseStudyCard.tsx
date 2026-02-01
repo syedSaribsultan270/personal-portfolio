@@ -12,6 +12,7 @@ interface CaseStudyCardProps {
   tags: string[]
   thumbnail: string
   index: number
+  website?: string
 }
 
 export function CaseStudyCard({
@@ -20,8 +21,12 @@ export function CaseStudyCard({
   subtitle,
   category,
   tags,
-  index
+  index,
+  website
 }: CaseStudyCardProps) {
+  const href = website || `/work/${slug}`
+  const linkProps = website ? { target: "_blank", rel: "noopener noreferrer" } : {}
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -29,7 +34,7 @@ export function CaseStudyCard({
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
     >
-      <Link href={`/work/${slug}`}>
+      <Link href={href} {...linkProps}>
         <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-zinc-200 dark:border-zinc-800">
           <div className="relative h-64 bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 dark:from-blue-950 dark:via-purple-950 dark:to-pink-950 overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-zinc-300 dark:text-zinc-700">
