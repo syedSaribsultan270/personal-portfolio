@@ -452,7 +452,7 @@ export const caseStudies = [
     hero: "/work/norenztech-hero.png",
     description: "Leading UI/UX design and development initiatives, creating user-centered digital products.",
     tags: ["UI/UX", "Engineering", "Design Systems", "Product Design"],
-    website: "https://www.norenztech.com",
+    website: "https://www.linkedin.com/company/norenztech/",
     overview: "As Lead UI/UX Engineer at NorenzTech, I led the design and development of user interfaces, establishing design systems and best practices.",
     problem: "Needed to establish consistent design standards while rapidly developing new product features.",
     solution: "Created a comprehensive design system and component library that enabled fast, consistent product development.",
