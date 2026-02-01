@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { SectionHeading } from "@/components/sections/SectionHeading"
 import { AnimatedGradientBackground } from "@/components/sections/AnimatedGradientBackground"
-import { personalInfo, experiences, skills } from "@/lib/data"
+import { personalInfo, experiences, skills, education } from "@/lib/data"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -54,6 +54,18 @@ export default function AboutPage() {
                         {personalInfo.email}
                       </a>
                     </div>
+                    <div>
+                      <span className="font-semibold text-zinc-900 dark:text-zinc-100">Phone:</span>{" "}
+                      <a href={`tel:${personalInfo.phone}`} className="text-blue-600 dark:text-blue-400 hover:underline">
+                        {personalInfo.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-zinc-900 dark:text-zinc-100">LinkedIn:</span>{" "}
+                      <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        Profile
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -99,7 +111,7 @@ export default function AboutPage() {
           {/* Skills */}
           <section className="mb-16">
             <h3 className="text-3xl font-bold mb-8 text-zinc-900 dark:text-zinc-100">Skills & Expertise</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {Object.entries(skills).map(([category, skillList], index) => (
                 <motion.div
                   key={category}
@@ -125,6 +137,42 @@ export default function AboutPage() {
                 </motion.div>
               ))}
             </div>
+          </section>
+
+          {/* Education */}
+          <section className="mb-16">
+            <h3 className="text-3xl font-bold mb-8 text-zinc-900 dark:text-zinc-100">Education</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                    <div>
+                      <h4 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                        {education.degree}
+                      </h4>
+                      <a 
+                        href={education.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zinc-600 dark:text-zinc-400 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {education.institution}
+                      </a>
+                    </div>
+                    <span className="text-sm text-zinc-500 dark:text-zinc-500 mt-1 md:mt-0">
+                      {education.period}
+                    </span>
+                  </div>
+                  <p className="text-zinc-600 dark:text-zinc-400">
+                    {education.location}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </section>
 
           {/* CTA */}

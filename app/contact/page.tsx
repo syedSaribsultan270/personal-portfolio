@@ -55,6 +55,17 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
+                        Phone
+                      </h4>
+                      <a 
+                        href={`tel:${personalInfo.phone}`}
+                        className="text-zinc-900 dark:text-zinc-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {personalInfo.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
                         Location
                       </h4>
                       <p className="text-zinc-900 dark:text-zinc-100">

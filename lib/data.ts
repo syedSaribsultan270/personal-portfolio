@@ -1,17 +1,18 @@
 export const personalInfo = {
   name: "Syed Sarib Sultan",
   roles: [
-    "UX Engineer",
-    "Creative Director",
-    "Head of Marketing",
-    "Digital Product Strategist"
+    "Product Designer",
+    "Cinematographer",
+    "Founder",
+    "UX Engineer"
   ],
-  tagline: "I design, build, and grow digital experiences — blending UX engineering, creative direction, and performance marketing.",
-  about: "A multidimensional digital product professional blending engineering precision, creative direction, UI/UX design, and strategic marketing. As a CS student at NUST with years of experience in UI/UX, branding, studio creative direction, and EdTech growth, I build experiences that are both functional and emotionally resonant. I run SXTUDIOS, lead marketing at Parhlai, and create narrative-driven digital products.",
-  email: "sarib@example.com",
+  tagline: "Product Design @ vyro.ai | Founder @ sxtudios — I am your best bet at growing your brand 10x in less than half the time.",
+  about: "I'm a product designer, but also a cinematographer. I'm a computer science student, but also a business and finance enthusiast. I believe building a great foundation is crucial to the success of anything. I'm a fast learner, an insanely quick and unbiased thinker, and resilient. I'm Sarib, founder of @sxtudios—your greatest asset in documenting dreams and imagination for the world to see.",
+  email: "sadakhan2002@gmail.com",
+  phone: "+92 333 5788859",
   location: "Islamabad, Pakistan",
   social: {
-    linkedin: "https://linkedin.com/in/syedsaribsultan",
+    linkedin: "https://www.linkedin.com/in/syedsaribsultanyac270",
     github: "https://github.com/syedSaribsultan270",
     twitter: "https://twitter.com/saribsultan",
     behance: "https://behance.net/saribsultan"
@@ -20,50 +21,118 @@ export const personalInfo = {
 
 export const experiences = [
   {
+    title: "Associate Product Design",
+    company: "Vyro",
+    period: "Dec 2025 - Present",
+    description: "Leading product design initiatives at Vyro.ai, creating intuitive and innovative user experiences.",
+    link: "https://www.vyro.ai"
+  },
+  {
+    title: "Associate Product Design",
+    company: "ImagineArt",
+    period: "Dec 2025 - Present",
+    description: "Designing creative AI-powered product experiences for ImagineArt's platform.",
+    link: "https://www.imagine.art"
+  },
+  {
     title: "Head of Marketing",
     company: "Parhlai",
-    period: "2023 - Present",
-    description: "Leading brand strategy, performance marketing, and growth initiatives for Pakistan's fastest-growing EdTech platform."
+    period: "Oct 2025 - Present",
+    description: "Leading marketing strategy and brand development for Pakistan's growing EdTech platform.",
+    link: "https://www.parhlai.com"
   },
   {
-    title: "Creative Director",
-    company: "SXTUDIOS",
-    period: "2022 - Present",
-    description: "Founded and directing a creative studio focused on branding, illustration, and narrative-driven design systems."
+    title: "Chief Executive Officer",
+    company: "sxtudios",
+    period: "Mar 2025 - Present",
+    description: "Founded and leading sxtudios—documenting dreams and imagination through creative storytelling and cinematography.",
+    link: "https://linktr.ee/sxtudios"
   },
   {
-    title: "UX Engineer",
-    company: "i2or / Applify",
-    period: "2021 - 2023",
-    description: "Designed and developed conversion-optimized interfaces using evidence-based UX principles."
+    title: "Digital Marketing Consultant",
+    company: "Parhlai",
+    period: "Jun 2025 - Oct 2025",
+    description: "Provided strategic digital marketing consultancy for Parhlai's growth initiatives.",
+    link: "https://www.parhlai.com"
+  },
+  {
+    title: "Head of Marketing",
+    company: "Career Konnect",
+    period: "Nov 2025 - Dec 2025",
+    description: "Led marketing initiatives and brand strategy for Career Konnect.",
+    link: "https://careerkonnect.org"
+  },
+  {
+    title: "Lead UI/UX Engineer",
+    company: "NorenzTech",
+    period: "Jan 2025 - Jun 2025",
+    description: "Led UI/UX design and development initiatives, creating user-centered digital products."
+  },
+  {
+    title: "Creative Head",
+    company: "Shadiyana",
+    period: "Apr 2025 - May 2025",
+    description: "Directed creative strategy and visual design for Shadiyana's platform.",
+    link: "https://www.shadiyana.pk/"
+  },
+  {
+    title: "User Experience Designer",
+    company: "easytect UG",
+    period: "Jan 2024 - Oct 2024",
+    description: "Designed user experiences and interfaces for easytect's digital products in Germany.",
+    link: "https://easytect.de/en/"
+  },
+  {
+    title: "Graphic Designer",
+    company: "ACM (Association for Computing Machinery)",
+    period: "Sep 2022 - Jan 2024",
+    description: "Created graphic designs and visual content for ACM events and communications.",
+    link: "https://www.acm.org/"
   }
 ]
 
 export const skills = {
-  engineering: [
+  design: [
+    "User Experience (UX)",
+    "Product Design",
+    "UI/UX Design",
+    "Figma",
+    "Adobe Creative Suite",
+    "Design Systems",
+    "Prototyping"
+  ],
+  technical: [
     "React / Next.js",
     "TypeScript",
     "TailwindCSS",
     "Framer Motion",
-    "REST APIs",
-    "Git / GitHub"
+    "Git / GitHub",
+    "Web Development"
   ],
-  design: [
-    "Figma",
-    "Adobe Creative Suite",
-    "UI/UX Design",
-    "Design Systems",
-    "Prototyping",
-    "User Research"
+  creative: [
+    "Cinematography",
+    "Video Production",
+    "Creative Direction",
+    "Illustration",
+    "Motion Graphics",
+    "Brand Development"
   ],
-  marketing: [
+  business: [
+    "Analytical Skills",
+    "Marketing Strategy",
     "Growth Strategy",
-    "Performance Marketing",
-    "Brand Development",
+    "Business Development",
     "Content Strategy",
-    "Analytics & Metrics",
-    "Funnel Optimization"
+    "Brand Positioning"
   ]
+}
+
+export const education = {
+  degree: "Bachelor of Science (BS), Computer Science",
+  institution: "National University of Sciences and Technology (NUST)",
+  period: "Sep 2022 - Sep 2026",
+  location: "Pakistan",
+  website: "https://nust.edu.pk"
 }
 
 export const services = [
