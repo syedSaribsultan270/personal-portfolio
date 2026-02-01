@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { personalInfo } from "@/lib/data"
@@ -21,9 +22,14 @@ export function Hero() {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-block mb-6"
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-3xl md:text-4xl font-bold text-white shadow-lg">
-              SS
-            </div>
+            <Image
+              src="/profile.jpg"
+              alt={personalInfo.name}
+              width={128}
+              height={128}
+              className="rounded-full shadow-lg object-cover"
+              priority
+            />
           </motion.div>
 
           <motion.h1
