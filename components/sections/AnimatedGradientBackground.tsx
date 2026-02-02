@@ -87,11 +87,6 @@ export function AnimatedGradientBackground() {
         className="w-full h-full"
         style={{ opacity: 0.4 }}
       />
-      
-      {/* Static accent dots for non-JS fallback */}
-      <div className="absolute top-20 right-20 w-2 h-2 bg-[#F9BD2B] rounded-full opacity-40" />
-      <div className="absolute bottom-40 left-40 w-3 h-3 bg-[#F9BD2B] rounded-full opacity-30" />
-      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-[#F9BD2B] rounded-full opacity-20" />
     </div>
   )
 }
