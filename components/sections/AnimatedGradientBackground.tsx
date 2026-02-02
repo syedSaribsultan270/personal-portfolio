@@ -28,9 +28,9 @@ export function AnimatedGradientBackground() {
     window.addEventListener("mousemove", handleMouseMove)
 
     // Dot grid settings
-    const dotSpacing = 25
-    const dotRadius = 2
-    const glowRadius = 180
+    const dotSpacing = 30
+    const dotRadius = 1.5
+    const glowRadius = 400
     
     // Animation loop
     const animate = () => {
@@ -43,38 +43,29 @@ export function AnimatedGradientBackground() {
           const dy = mousePos.current.y - y
           const distance = Math.sqrt(dx * dx + dy * dy)
           
-          // Calculate opacity based on distance from cursor
-          let opacity = 0.35
-          let radius = dotRadius
-          
+          // Calculate opacity based on distance from cursor with smooth feathering
+          let opacity = 0.12
           if (distance < glowRadius) {
-            const intensity = 1 - distance / glowRadius
-            opacity = 0.4 + intensity * 0.6
-            radius = dotRadius + intensity * 1.5
+            // Easing function for smoother falloff (quadratic easing out)
+            const normalizedDistance = distance / glowRadius
+            const intensity = 1 - (normalizedDistance * normalizedDistance)
+            opacity = 0.12 + intensity * 0.7
           }
 
           // Draw dot with cursor-based glow
           ctx.beginPath()
-          ctx.arc(x, y, radius, 0, Math.PI * 2)
+          ctx.arc(x, y, dotRadius, 0, Math.PI * 2)
           
           if (distance < glowRadius) {
-            // Glow effect near cursor - PostHog yellow with extra brightness
+            // Glow effect near cursor - PostHog yellow
             const intensity = 1 - distance / glowRadius
             ctx.fillStyle = `rgba(249, 189, 43, ${opacity})`
-            
-            // Add glow halo for extra luminance
-            if (intensity > 0.5) {
-              ctx.shadowColor = 'rgba(249, 189, 43, 0.6)'
-              ctx.shadowBlur = 8
-            }
           } else {
-            // Regular dots - darker for more contrast
-            ctx.fillStyle = `rgba(60, 60, 60, ${opacity})`
-            ctx.shadowBlur = 0
+            // Regular dots - subtle gray
+            ctx.fillStyle = `rgba(100, 100, 100, ${opacity})`
           }
           
           ctx.fill()
-          ctx.shadowBlur = 0
         }
       }
 
@@ -94,8 +85,13 @@ export function AnimatedGradientBackground() {
       <canvas
         ref={canvasRef}
         className="w-full h-full"
-        style={{ opacity: 0.7 }}
+        style={{ opacity: 0.4 }}
       />
+      
+      {/* Static accent dots for non-JS fallback */}
+      <div className="absolute top-20 right-20 w-2 h-2 bg-[#F9BD2B] rounded-full opacity-40" />
+      <div className="absolute bottom-40 left-40 w-3 h-3 bg-[#F9BD2B] rounded-full opacity-30" />
+      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-[#F9BD2B] rounded-full opacity-20" />
     </div>
   )
 }
