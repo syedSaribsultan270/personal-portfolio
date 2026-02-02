@@ -21,12 +21,15 @@ export default function Home() {
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ 
+              duration: 0.5,
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
           >
-            <SectionHeading>👋 Who is this person?</SectionHeading>
+            <SectionHeading>About</SectionHeading>
             <Card className="border-2 border-zinc-900 dark:border-zinc-700 shadow-[8px_8px_0_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0_rgba(0,0,0,0.15)]">
               <CardContent className="p-8">
                 <div className="font-mono text-xs text-[#F9BD2B] mb-4">README.md</div>
@@ -34,7 +37,7 @@ export default function Home() {
                   {personalInfo.about}
                 </p>
                 <Button asChild variant="outline" className="hover:scale-105 transition-transform">
-                  <Link href="/about">Read the full story →</Link>
+                  <Link href="/about">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -45,17 +48,21 @@ export default function Home() {
       {/* Experience Preview */}
       <section className="py-24 px-6 bg-[#EBE6DC] dark:bg-[#252525]">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="The journey so far (and it's been wild)">
-            💼 Where I've Built Cool Stuff
+          <SectionHeading subtitle="Building products and brands across multiple ventures">
+            Experience & Leadership
           </SectionHeading>
           <div className="grid md:grid-cols-3 gap-6">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.company}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ 
+                  delay: index * 0.08, 
+                  duration: 0.4,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
               >
                 <Card className="h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-zinc-900 dark:border-zinc-700 shadow-[4px_4px_0_rgba(0,0,0,0.1)] hover:shadow-[6px_6px_0_rgba(0,0,0,0.15)]">
                   <CardContent className="p-6">
@@ -82,13 +89,13 @@ export default function Home() {
       {/* Featured Work */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="Real projects. Real impact. Real results.">
-            🎨 Featured Work
+          <SectionHeading subtitle="Case studies showcasing strategic design and business impact">
+            Featured Work
           </SectionHeading>
           <WorkGrid />
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-[#F9BD2B] hover:bg-[#f5b01a] text-zinc-900 font-bold hover:scale-105 transition-all shadow-lg">
-              <Link href="/work">See All Projects →</Link>
+              <Link href="/work">View All Projects</Link>
             </Button>
           </div>
         </div>
@@ -98,38 +105,40 @@ export default function Home() {
       <section className="py-24 px-6 bg-[#EBE6DC] dark:bg-[#252525]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ 
+              duration: 0.5,
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
           >
             <h2 className="text-5xl md:text-7xl font-black mb-6 text-zinc-900 dark:text-zinc-100 tracking-tight">
-              Shameless CTA
+              Let's Build Together
             </h2>
             <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto">
-              If nothing else has convinced you to work together, hopefully this classic marketing tactic will.
+              Whether you're launching a new product, scaling your brand, or need strategic design leadership—I'm here to help turn vision into reality.
             </p>
             <div className="font-mono text-xs text-zinc-500 dark:text-zinc-500 mb-6">
-              <span className="text-green-600">$</span> npm install @sarib/hire-me@latest
+              <span className="text-green-600">$</span> npm install @sarib/strategic-design
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#F9BD2B] hover:bg-[#f5b01a] text-zinc-900 font-bold hover:scale-105 transition-all shadow-xl text-lg px-8">
-                <Link href="/contact">🚀 Let's Build Together</Link>
+                <Link href="/contact">Start a Project</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-2 hover:scale-105 transition-all">
-                <Link href="/services">📋 View Services</Link>
+                <Link href="/services">View Services</Link>
               </Button>
             </div>
-            <p className="text-sm text-zinc-500 dark:text-zinc-500 mt-6 italic">
-              *Warning: Working with me may result in exponential brand growth and dangerously good design.<br/>
-              <span className="font-mono text-xs">**Side effects include: increased conversions, better UX, and jealous competitors.</span>
+            <p className="text-sm text-zinc-500 dark:text-zinc-500 mt-6">
+              <span className="font-mono text-xs">Trusted by startups and established brands to deliver design that drives business growth.</span>
             </p>
             <div className="mt-8 pt-8 border-t-2 border-zinc-300 dark:border-zinc-700">
               <div className="flex flex-wrap justify-center gap-4 text-xs font-mono text-zinc-500">
-                <span>✓ Fast learner</span>
-                <span>✓ Coffee-powered</span>
-                <span>✓ Git commit champion</span>
-                <span>✓ Dark mode enthusiast</span>
+                <span>✓ Strategic Design</span>
+                <span>✓ Product Leadership</span>
+                <span>✓ Brand Development</span>
+                <span>✓ Growth Marketing</span>
               </div>
             </div>
           </motion.div>

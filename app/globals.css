@@ -79,10 +79,20 @@ body {
 /* Smooth transitions */
 @media (prefers-reduced-motion: no-preference) {
   * {
-    transition-property: color, background-color, border-color, transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+    transition-property: color, background-color, border-color, transform, opacity;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-duration: 200ms;
   }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* PostHog-inspired utilities */
@@ -99,7 +109,7 @@ body {
 }
 
 .hover-lift {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .hover-lift:hover {

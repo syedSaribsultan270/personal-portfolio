@@ -6,8 +6,8 @@ export const personalInfo = {
     "Founder",
     "UX Engineer"
   ],
-  tagline: "I design, build, and grow digital products. Also make things look good on camera. Currently shipping pixels @ vyro.ai",
-  about: "I'm a product designer who codes, a cinematographer who thinks in systems, and a CS student who gets excited about brand strategy. I believe in building strong foundations—whether it's a design system, a business model, or a git workflow. Fast learner. Quick thinker. Decent at using semi-colons. Founded @sxtudios to document dreams and make the internet slightly more beautiful.",
+  tagline: "Building exceptional digital products and brands. Currently designing at vyro.ai and scaling sxtudios—where strategic design meets business growth.",
+  about: "I'm a product designer and founder who bridges creativity with business strategy. My approach combines design systems thinking, technical execution, and growth-focused marketing to build products that scale. I founded sxtudios to help brands tell their stories through strategic design and cinematic content. My work spans product design, brand development, and go-to-market strategy—always with an eye on sustainable business impact.",
   email: "sadakhan2002@gmail.com",
   phone: "+92 333 5788859",
   location: "Islamabad, Pakistan",
