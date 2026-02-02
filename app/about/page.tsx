@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { SectionHeading } from "@/components/sections/SectionHeading"
 import { AnimatedGradientBackground } from "@/components/sections/AnimatedGradientBackground"
@@ -24,8 +25,18 @@ export default function AboutPage() {
           >
             <SectionHeading>About Me</SectionHeading>
             <div className="flex justify-center mb-8">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-4xl font-bold text-white shadow-lg">
-                SS
+              <div className="relative">
+                <Image
+                  src="/profile.jpg"
+                  alt={personalInfo.name}
+                  width={140}
+                  height={140}
+                  className="rounded-xl border-4 border-zinc-900 shadow-[8px_8px_0_rgba(0,0,0,0.1)] object-cover"
+                  priority
+                />
+                <div className="absolute -bottom-2 -right-2 bg-[#F9BD2B] border-2 border-zinc-900 px-2 py-1 text-xs font-mono font-bold rounded transform rotate-3">
+                  ONLINE
+                </div>
               </div>
             </div>
           </motion.div>
