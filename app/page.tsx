@@ -26,14 +26,15 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <SectionHeading>About Me</SectionHeading>
-            <Card>
+            <SectionHeading>👋 Who is this person?</SectionHeading>
+            <Card className="border-2 border-zinc-900 dark:border-zinc-700 shadow-[8px_8px_0_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0_rgba(0,0,0,0.15)]">
               <CardContent className="p-8">
+                <div className="font-mono text-xs text-[#F9BD2B] mb-4">README.md</div>
                 <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
                   {personalInfo.about}
                 </p>
-                <Button asChild variant="outline">
-                  <Link href="/about">Learn More About Me</Link>
+                <Button asChild variant="outline" className="hover:scale-105 transition-transform">
+                  <Link href="/about">Read the full story →</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -42,10 +43,10 @@ export default function Home() {
       </section>
 
       {/* Experience Preview */}
-      <section className="py-24 px-6 bg-zinc-50 dark:bg-zinc-900/50">
+      <section className="py-24 px-6 bg-[#EBE6DC] dark:bg-[#252525]">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="My journey across UX engineering, creative direction, and marketing">
-            Experience
+          <SectionHeading subtitle="The journey so far (and it's been wild)">
+            💼 Where I've Built Cool Stuff
           </SectionHeading>
           <div className="grid md:grid-cols-3 gap-6">
             {experiences.map((exp, index) => (
@@ -56,17 +57,15 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                <Card className="h-full">
+                <Card className="h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-zinc-900 dark:border-zinc-700 shadow-[4px_4px_0_rgba(0,0,0,0.1)] hover:shadow-[6px_6px_0_rgba(0,0,0,0.15)]">
                   <CardContent className="p-6">
+                    <div className="font-mono text-[10px] text-[#F9BD2B] mb-3">{`// ${exp.period}`}</div>
                     <div className="mb-4">
                       <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
                         {exp.title}
                       </h3>
                       <p className="text-zinc-600 dark:text-zinc-400 font-medium">
                         {exp.company}
-                      </p>
-                      <p className="text-sm text-zinc-500 dark:text-zinc-500">
-                        {exp.period}
                       </p>
                     </div>
                     <p className="text-zinc-600 dark:text-zinc-400">
@@ -83,20 +82,20 @@ export default function Home() {
       {/* Featured Work */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading subtitle="Case studies from my work in EdTech, creative studios, and product design">
-            Featured Work
+          <SectionHeading subtitle="Real projects. Real impact. Real results.">
+            🎨 Featured Work
           </SectionHeading>
           <WorkGrid />
           <div className="text-center mt-12">
-            <Button asChild size="lg">
-              <Link href="/work">View All Projects</Link>
+            <Button asChild size="lg" className="bg-[#F9BD2B] hover:bg-[#f5b01a] text-zinc-900 font-bold hover:scale-105 transition-all shadow-lg">
+              <Link href="/work">See All Projects →</Link>
             </Button>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-zinc-50 dark:bg-zinc-900/50">
+      <section className="py-24 px-6 bg-[#EBE6DC] dark:bg-[#252525]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,19 +103,34 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-zinc-900 dark:text-zinc-100">
-              Let's Create Something Amazing
+            <h2 className="text-5xl md:text-7xl font-black mb-6 text-zinc-900 dark:text-zinc-100 tracking-tight">
+              Shameless CTA
             </h2>
-            <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto">
-              Whether you need a stunning website, a comprehensive brand identity, or a growth marketing strategy, I'm here to help bring your vision to life.
+            <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto">
+              If nothing else has convinced you to work together, hopefully this classic marketing tactic will.
             </p>
+            <div className="font-mono text-xs text-zinc-500 dark:text-zinc-500 mb-6">
+              <span className="text-green-600">$</span> npm install @sarib/hire-me@latest
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/contact">Get In Touch</Link>
+              <Button asChild size="lg" className="bg-[#F9BD2B] hover:bg-[#f5b01a] text-zinc-900 font-bold hover:scale-105 transition-all shadow-xl text-lg px-8">
+                <Link href="/contact">🚀 Let's Build Together</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/services">View Services</Link>
+              <Button asChild size="lg" variant="outline" className="border-2 hover:scale-105 transition-all">
+                <Link href="/services">📋 View Services</Link>
               </Button>
+            </div>
+            <p className="text-sm text-zinc-500 dark:text-zinc-500 mt-6 italic">
+              *Warning: Working with me may result in exponential brand growth and dangerously good design.<br/>
+              <span className="font-mono text-xs">**Side effects include: increased conversions, better UX, and jealous competitors.</span>
+            </p>
+            <div className="mt-8 pt-8 border-t-2 border-zinc-300 dark:border-zinc-700">
+              <div className="flex flex-wrap justify-center gap-4 text-xs font-mono text-zinc-500">
+                <span>✓ Fast learner</span>
+                <span>✓ Coffee-powered</span>
+                <span>✓ Git commit champion</span>
+                <span>✓ Dark mode enthusiast</span>
+              </div>
             </div>
           </motion.div>
         </div>

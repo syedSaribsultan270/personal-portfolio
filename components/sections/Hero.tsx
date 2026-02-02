@@ -8,7 +8,14 @@ import { personalInfo } from "@/lib/data"
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 pb-12">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20 pb-12 relative">
+      <div className="absolute top-24 left-8 font-mono text-xs text-zinc-400 hidden lg:block">
+        <div className="space-y-1">
+          <div>💾 portfolio.exe</div>
+          <div>📊 Loading assets...</div>
+          <div className="text-green-600">✓ System ready</div>
+        </div>
+      </div>
       <div className="max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,33 +29,42 @@ export function Hero() {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-block mb-6"
           >
-            <Image
-              src="/profile.jpg"
-              alt={personalInfo.name}
-              width={128}
-              height={128}
-              className="rounded-full shadow-lg object-cover"
-              priority
-            />
+            <div className="relative">
+              <Image
+                src="/profile.jpg"
+                alt={personalInfo.name}
+                width={140}
+                height={140}
+                className="rounded-xl border-4 border-zinc-900 shadow-[8px_8px_0_rgba(0,0,0,0.1)] object-cover"
+                priority
+              />
+              <div className="absolute -bottom-2 -right-2 bg-[#F9BD2B] border-2 border-zinc-900 px-2 py-1 text-xs font-mono font-bold rounded transform rotate-3">
+                ONLINE
+              </div>
+            </div>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight"
+            className="text-6xl md:text-8xl lg:text-9xl font-black text-zinc-900 dark:text-zinc-100 tracking-tighter leading-none"
           >
             {personalInfo.name}
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 font-medium"
+            className="text-xl md:text-3xl font-bold"
           >
-            UX Engineer • Creative Director • Head of Marketing
-          </motion.p>
+            <span className="text-zinc-900 dark:text-zinc-100">UX Engineer</span>
+            <span className="text-zinc-400 dark:text-zinc-600 mx-2">•</span>
+            <span className="text-zinc-900 dark:text-zinc-100">Creative Director</span>
+            <span className="text-zinc-400 dark:text-zinc-600 mx-2">•</span>
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Head of Marketing</span>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -65,12 +81,29 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
           >
-            <Button asChild size="lg" className="hover:scale-105 transition-transform">
-              <Link href="/work">View My Work</Link>
+            <Button asChild size="lg" className="bg-[#F9BD2B] hover:bg-[#f5b01a] text-zinc-900 font-bold hover:scale-105 transition-all shadow-lg hover:shadow-xl">
+              <Link href="/work">👀 View My Work</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="hover:scale-105 transition-transform">
-              <Link href="/contact">Contact Me</Link>
+            <Button asChild size="lg" variant="outline" className="border-2 border-zinc-900 dark:border-zinc-100 hover:scale-105 transition-all hover:bg-zinc-900 hover:text-white dark:hover:bg-zinc-100 dark:hover:text-zinc-900">
+              <Link href="/contact">💬 Let's Talk</Link>
             </Button>
+          </motion.div>
+
+          {/* PostHog-style tech stack */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="pt-12 mt-12 border-t-2 border-zinc-300 dark:border-zinc-700"
+          >
+            <p className="font-mono text-xs text-zinc-500 dark:text-zinc-500 mb-4">$ cat tech-stack.txt</p>
+            <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+              {['Next.js', 'React', 'TypeScript', 'Figma', 'Tailwind', 'Framer'].map((tech) => (
+                <span key={tech} className="font-mono text-xs px-3 py-1.5 bg-white dark:bg-zinc-800 border-2 border-zinc-900 dark:border-zinc-700 rounded hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0_rgba(0,0,0,0.1)] transition-all">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>

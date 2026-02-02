@@ -6,8 +6,8 @@ export const personalInfo = {
     "Founder",
     "UX Engineer"
   ],
-  tagline: "Product Design @ vyro.ai | Founder @ sxtudios — I am your best bet at growing your brand 10x in less than half the time.",
-  about: "I'm a product designer, but also a cinematographer. I'm a computer science student, but also a business and finance enthusiast. I believe building a great foundation is crucial to the success of anything. I'm a fast learner, an insanely quick and unbiased thinker, and resilient. I'm Sarib, founder of @sxtudios—your greatest asset in documenting dreams and imagination for the world to see.",
+  tagline: "I design, build, and grow digital products. Also make things look good on camera. Currently shipping pixels @ vyro.ai",
+  about: "I'm a product designer who codes, a cinematographer who thinks in systems, and a CS student who gets excited about brand strategy. I believe in building strong foundations—whether it's a design system, a business model, or a git workflow. Fast learner. Quick thinker. Decent at using semi-colons. Founded @sxtudios to document dreams and make the internet slightly more beautiful.",
   email: "sadakhan2002@gmail.com",
   phone: "+92 333 5788859",
   location: "Islamabad, Pakistan",

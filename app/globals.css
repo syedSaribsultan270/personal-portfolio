@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F1E8;
+  --background-secondary: #EBE6DC;
+  --foreground: #1d1d1d;
+  --accent: #F9BD2B;
+  --accent-hover: #f5b01a;
+  --accent-blue: #1d4ed8;
+  --accent-red: #dc2626;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1a1a1a;
+    --background-secondary: #252525;
     --foreground: #ededed;
+    --accent: #F9BD2B;
+    --accent-hover: #ffca3a;
   }
 }
 
@@ -28,6 +39,17 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+}
+
+/* PostHog-inspired retro aesthetic */
+.retro-border {
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.retro-border:hover {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+  transform: translate(-2px, -2px);
 }
 
 /* Custom scrollbar */
@@ -57,8 +79,29 @@ body {
 /* Smooth transitions */
 @media (prefers-reduced-motion: no-preference) {
   * {
-    transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
+}
+
+/* PostHog-inspired utilities */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
 }
